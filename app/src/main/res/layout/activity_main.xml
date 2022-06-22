@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+
+        >
+        <ImageView
+            android:id="@+id/image_All"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_all_incone"
+            app:tint="@color/white"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:id="@+id/image_Happy"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_happy_icon"
+            app:tint="@color/white"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:id="@+id/image_Morning"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_sun_icone"
+            app:tint="@color/white"
+            android:contentDescription="@string/todo" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/utilizador"
+        android:layout_below="@+id/linearMenu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/textView_Phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/frase"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="32dp"
+        android:textSize="22sp"
+        />
+    <View
+        android:layout_width="128dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/textView_Phrase"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="34dp"
+        />
+    <Button
+        android:id="@+id/buttonNewPhrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nova_frase"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@drawable/ripple_button"
+        android:backgroundTint="@color/colorPrimary"
+
+        />
+
+</RelativeLayout>
