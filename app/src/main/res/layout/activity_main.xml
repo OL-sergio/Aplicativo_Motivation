@@ -70,26 +70,25 @@
         android:layout_marginTop="32dp"
         android:textSize="22sp"
         />
+
     <View
         android:layout_width="128dp"
         android:layout_height="3dp"
         android:layout_below="@id/textView_Phrase"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
         android:layout_marginTop="34dp"
-        />
+        android:background="@color/purple" />
+
     <Button
         android:id="@+id/buttonNewPhrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nova_frase"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:background="@drawable/ripple_button"
         android:backgroundTint="@color/colorPrimary"
-
+        android:padding="16dp"
+        android:text="@string/nova_frase"
         />
 
 </RelativeLayout>

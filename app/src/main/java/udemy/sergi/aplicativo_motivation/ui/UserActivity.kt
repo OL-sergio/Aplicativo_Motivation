@@ -5,19 +5,22 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_splash.*
 import udemy.sergi.aplicativo_motivation.R
+import udemy.sergi.aplicativo_motivation.databinding.ActivityUserBinding
 import udemy.sergi.aplicativo_motivation.infra.MotivationConstants
 import udemy.sergi.aplicativo_motivation.infra.SecurityPreferences
 
 
-class SplashActivity : AppCompatActivity(), View.OnClickListener {
+class UserActivity : AppCompatActivity(), View.OnClickListener {
+
+    private lateinit var binding: ActivityUserBinding
 
     private lateinit var  mSecurityPreferences: SecurityPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        binding = ActivityUserBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
 
         mSecurityPreferences = SecurityPreferences(this)
@@ -29,7 +32,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
             supportActionBar!!.hide()
         }
 
-        button_Save.setOnClickListener (this)
+        binding.buttonSave.setOnClickListener (this)
 
         verifyName()
 
@@ -63,11 +66,11 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun handlerSave() {
 
-        val name = ediText_Name.text.toString()
+        val name = binding.ediTextName.text.toString()
 
         if (name != ""){
 
-            mSecurityPreferences.storeString("name", name)
+            mSecurityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
             val intent = Intent ( this, MainActivity::class.java)
             startActivity(intent)
             finish()

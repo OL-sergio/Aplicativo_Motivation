@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@color/colorPrimary"
-    tools:context=".ui.SplashActivity">
+    tools:context=".ui.UserActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,24 +22,23 @@
         android:id="@+id/ediText_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:autofillHints=""
         android:gravity="center"
         android:hint="@string/qual_o_seu_nome"
-        android:textSize="25sp"
+        android:inputType="text"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:inputType="text"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:autofillHints="" />
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/button_Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/guardar"
-        android:backgroundTint="@color/colorAccent"
-        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/dark_purple"
+        android:text="@string/guardar" />
 
 </RelativeLayout>

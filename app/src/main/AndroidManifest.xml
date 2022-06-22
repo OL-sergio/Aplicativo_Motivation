@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.S30_118_121_Aplicativo_Motivation">
-        <activity android:name="udemy.sergi.aplicativo_motivation.ui.SplashActivity">
+        <activity android:name="udemy.sergi.aplicativo_motivation.ui.UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
